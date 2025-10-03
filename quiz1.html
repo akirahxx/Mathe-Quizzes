@@ -14,20 +14,24 @@ h1 { color:#333; }
 .explanation { font-size:0.9em; color:#555; }
 .feedback { margin-top:6px; }
 button { margin-top:12px; padding:10px 16px; border:none; border-radius:6px; background:#007BFF; color:white; cursor:pointer; }
+button:hover { background:#0056b3; }
 </style>
 </head>
 <body>
 <h1>📐 Umfang & Flächeninhalt</h1>
 <form id="quizForm">
 <div class="question"><p><strong>1.</strong> Quadrat mit Seitenlänge x, Umfang?</p><div class="answers"><label><input type="radio" name="q1" value="2x"> 2x</label><label><input type="radio" name="q1" value="4x"> 4x</label><label><input type="radio" name="q1" value="x²"> x²</label></div><div id="fb-q1" class="feedback"></div></div>
-<div class="question"><p><strong>2.</strong> Rechteck mit Seiten a,b, Fläche?</p><div class="answers"><label><input type="radio" name="q2" value="ab"> ab</label><label><input type="radio" name="q2" value="a+b"> a+b</label><label><input type="radio" name="q2" value="2a+2b"> 2a+2b</label></div><div id="fb-q2" class="feedback"></div></div>
+<div class="question"><p><strong>2.</strong> Quadrat mit Seitenlänge x, Fläche?</p><div class="answers"><label><input type="radio" name="q2" value="2x"> 2x</label><label><input type="radio" name="q2" value="4x"> 4x</label><label><input type="radio" name="q2" value="x²"> x²</label></div><div id="fb-q2" class="feedback"></div></div>
+<div class="question"><p><strong>3.</strong> Rechteck Seiten a,b: Umfang?</p><div class="answers"><label><input type="radio" name="q3" value="a+b"> a+b</label><label><input type="radio" name="q3" value="2a+2b"> 2a+2b</label><label><input type="radio" name="q3" value="ab"> ab</label></div><div id="fb-q3" class="feedback"></div></div>
+<div class="question"><p><strong>4.</strong> Rechteck Seiten a,b: Fläche?</p><div class="answers"><label><input type="radio" name="q4" value="a+b"> a+b</label><label><input type="radio" name="q4" value="2a+2b"> 2a+2b</label><label><input type="radio" name="q4" value="ab"> ab</label></div><div id="fb-q4" class="feedback"></div></div>
+<div class="question"><p><strong>5.</strong> Quadrat Seite 5, Umfang?</p><div class="answers"><label><input type="radio" name="q5" value="20"> 20</label><label><input type="radio" name="q5" value="25"> 25</label><label><input type="radio" name="q5" value="10"> 10</label></div><div id="fb-q5" class="feedback"></div></div>
 
 <button type="button" onclick="checkQuiz()">✔️ Auswerten</button>
 <button type="button" onclick="resetQuiz()">🔄 Reset</button>
 <div id="result" class="result"></div>
 </form>
 <script>
-var explanations = {"q1": {"answer": "4x", "exp": "U=4x"}, "q2": {"answer": "ab", "exp": "A=ab"}};
+var explanations = {"q1": {"answer": "4x", "exp": "U=4x"}, "q2": {"answer": "x²", "exp": "A=x²"}, "q3": {"answer": "2a+2b", "exp": "U=2a+2b"}, "q4": {"answer": "ab", "exp": "A=ab"}, "q5": {"answer": "20", "exp": "U=4·5=20"}};
 function normalize(str) { return String(str).replace(/\s+/g,'').replace(',', '.').toLowerCase(); }
 function checkQuiz(){
   var score=0; var total=0;
