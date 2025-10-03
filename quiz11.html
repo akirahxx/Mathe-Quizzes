@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz 11 – Ausmultiplizieren von Summen</title>
+<style>
+body { font-family: Arial, sans-serif; margin:20px; background:#f8f8f8; }
+h1 { color:#333; }
+.question { margin:16px 0; padding:12px; background:#fff; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,.1); }
+.answers label { display:block; }
+.correct { color:green; }
+.wrong { color:red; }
+.explanation { font-size:0.9em; color:#555; }
+.feedback { margin-top:6px; }
+button { margin-top:12px; padding:10px 16px; border:none; border-radius:6px; background:#007BFF; color:white; cursor:pointer; }
+</style>
+</head>
+<body>
+<h1>🔄 Summen ausmultiplizieren</h1>
+<form id="quizForm">
+<div class="question"><p><strong>1.</strong> Multipliziere aus: (x+2)(x+3)</p><div class="answers"><label><input type="radio" name="q1" value="x²+5x+6"> x²+5x+6</label><label><input type="radio" name="q1" value="x²+6"> x²+6</label><label><input type="radio" name="q1" value="5x+6"> 5x+6</label></div><div id="fb-q1" class="feedback"></div></div>
+<div class="question"><p><strong>2.</strong> Multipliziere aus: (a+4)(b+5)</p><div class="answers"><label><input type="radio" name="q2" value="ab+5a+4b+20"> ab+5a+4b+20</label><label><input type="radio" name="q2" value="ab+9"> ab+9</label><label><input type="radio" name="q2" value="a+b+20"> a+b+20</label></div><div id="fb-q2" class="feedback"></div></div>
+
+<button type="button" onclick="checkQuiz()">✔️ Auswerten</button>
+<button type="button" onclick="resetQuiz()">🔄 Reset</button>
+<div id="result" class="result"></div>
+</form>
+<script>
+var explanations = {"q1": {"answer": "x²+5x+6", "exp": "x·x=x², x·3=3x, 2·x=2x, 2·3=6 → x²+5x+6"}, "q2": {"answer": "ab+5a+4b+20", "exp": "a·b=ab, a·5=5a, 4·b=4b, 4·5=20"}};
+function normalize(str) { return String(str).replace(/\s+/g,'').replace(',', '.').toLowerCase(); }
+function checkQuiz(){
+  var score=0; var total=0;
+  for (var key in explanations){
+    total++;
+    var chosen=document.querySelector('input[name="'+key+'"]:checked');
+    var box=document.getElementById('fb-'+key);
+    var correct=explanations[key].answer;
+    var exp=explanations[key].exp;
+    if (chosen && normalize(chosen.value)===normalize(correct)){
+      score++; box.innerHTML="<div class='correct'>✅ richtig</div>";
+    } else if (chosen){
+      box.innerHTML="<div class='wrong'>❌ falsch – richtig: "+correct+"</div><div class='explanation'>"+exp+"</div>";
+    } else {
+      box.innerHTML="<div class='wrong'>⚠️ keine Antwort – richtig: "+correct+"</div><div class='explanation'>"+exp+"</div>";
+    }
+  }
+  document.getElementById('result').innerHTML="Punkte: "+score+"/"+total;
+}
+function resetQuiz(){ document.getElementById('quizForm').reset(); 
+  for (var key in explanations){document.getElementById('fb-'+key).innerHTML="";}
+  document.getElementById('result').innerHTML=""; }
+</script>
+</body></html>

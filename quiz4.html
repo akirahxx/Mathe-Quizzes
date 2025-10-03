@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz 4 – Terme multiplizieren</title>
+<style>
+body { font-family: Arial, sans-serif; margin:20px; background:#f8f8f8; }
+h1 { color:#333; }
+.question { margin:16px 0; padding:12px; background:#fff; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,.1); }
+.answers label { display:block; }
+.correct { color:green; }
+.wrong { color:red; }
+.explanation { font-size:0.9em; color:#555; }
+.feedback { margin-top:6px; }
+button { margin-top:12px; padding:10px 16px; border:none; border-radius:6px; background:#007BFF; color:white; cursor:pointer; }
+</style>
+</head>
+<body>
+<h1>✖️ Terme multiplizieren</h1>
+<form id="quizForm">
+<div class="question"><p><strong>1.</strong> Berechne: 2x·3</p><div class="answers"><label><input type="radio" name="q1" value="5x"> 5x</label><label><input type="radio" name="q1" value="6x"> 6x</label><label><input type="radio" name="q1" value="x^2"> x^2</label></div><div id="fb-q1" class="feedback"></div></div>
+<div class="question"><p><strong>2.</strong> Berechne: x·x</p><div class="answers"><label><input type="radio" name="q2" value="x"> x</label><label><input type="radio" name="q2" value="2x"> 2x</label><label><input type="radio" name="q2" value="x²"> x²</label></div><div id="fb-q2" class="feedback"></div></div>
+
+<button type="button" onclick="checkQuiz()">✔️ Auswerten</button>
+<button type="button" onclick="resetQuiz()">🔄 Reset</button>
+<div id="result" class="result"></div>
+</form>
+<script>
+var explanations = {"q1": {"answer": "6x", "exp": "2x·3=6x"}, "q2": {"answer": "x²", "exp": "x mal x = x²"}};
+function normalize(str) { return String(str).replace(/\s+/g,'').replace(',', '.').toLowerCase(); }
+function checkQuiz(){
+  var score=0; var total=0;
+  for (var key in explanations){
+    total++;
+    var chosen=document.querySelector('input[name="'+key+'"]:checked');
+    var box=document.getElementById('fb-'+key);
+    var correct=explanations[key].answer;
+    var exp=explanations[key].exp;
+    if (chosen && normalize(chosen.value)===normalize(correct)){
+      score++; box.innerHTML="<div class='correct'>✅ richtig</div>";
+    } else if (chosen){
+      box.innerHTML="<div class='wrong'>❌ falsch – richtig: "+correct+"</div><div class='explanation'>"+exp+"</div>";
+    } else {
+      box.innerHTML="<div class='wrong'>⚠️ keine Antwort – richtig: "+correct+"</div><div class='explanation'>"+exp+"</div>";
+    }
+  }
+  document.getElementById('result').innerHTML="Punkte: "+score+"/"+total;
+}
+function resetQuiz(){ document.getElementById('quizForm').reset(); 
+  for (var key in explanations){document.getElementById('fb-'+key).innerHTML="";}
+  document.getElementById('result').innerHTML=""; }
+</script>
+</body></html>
