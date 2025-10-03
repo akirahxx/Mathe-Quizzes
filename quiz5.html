@@ -14,20 +14,34 @@ h1 { color:#333; }
 .explanation { font-size:0.9em; color:#555; }
 .feedback { margin-top:6px; }
 button { margin-top:12px; padding:10px 16px; border:none; border-radius:6px; background:#007BFF; color:white; cursor:pointer; }
+button:hover { background:#0056b3; }
 </style>
 </head>
 <body>
 <h1>➗ Terme dividieren</h1>
 <form id="quizForm">
-<div class="question"><p><strong>1.</strong> Berechne: 6x ÷ 3</p><div class="answers"><label><input type="radio" name="q1" value="2"> 2</label><label><input type="radio" name="q1" value="2x"> 2x</label><label><input type="radio" name="q1" value="x/2"> x/2</label></div><div id="fb-q1" class="feedback"></div></div>
-<div class="question"><p><strong>2.</strong> Berechne: x² ÷ x</p><div class="answers"><label><input type="radio" name="q2" value="x"> x</label><label><input type="radio" name="q2" value="x²"> x²</label><label><input type="radio" name="q2" value="1"> 1</label></div><div id="fb-q2" class="feedback"></div></div>
+<div class="question"><p><strong>1.</strong> (6x) / 3</p><div class="answers"><label><input type="radio" name="q1" value="2x"> 2x</label><label><input type="radio" name="q1" value="6"> 6</label><label><input type="radio" name="q1" value="x"> x</label></div><div id="fb-q1" class="feedback"></div></div>
+<div class="question"><p><strong>2.</strong> (10a) / 5</p><div class="answers"><label><input type="radio" name="q2" value="2a"> 2a</label><label><input type="radio" name="q2" value="5a"> 5a</label><label><input type="radio" name="q2" value="15a"> 15a</label></div><div id="fb-q2" class="feedback"></div></div>
+<div class="question"><p><strong>3.</strong> 12 / 4</p><div class="answers"><label><input type="radio" name="q3" value="4"> 4</label><label><input type="radio" name="q3" value="3"> 3</label><label><input type="radio" name="q3" value="6"> 6</label></div><div id="fb-q3" class="feedback"></div></div>
+<div class="question"><p><strong>4.</strong> x² / x</p><div class="answers"><label><input type="radio" name="q4" value="x"> x</label><label><input type="radio" name="q4" value="x²"> x²</label><label><input type="radio" name="q4" value="2x"> 2x</label></div><div id="fb-q4" class="feedback"></div></div>
+<div class="question"><p><strong>5.</strong> (-8y) / (-2)</p><div class="answers"><label><input type="radio" name="q5" value="-4y"> -4y</label><label><input type="radio" name="q5" value="4y"> 4y</label><label><input type="radio" name="q5" value="y/4"> y/4</label></div><div id="fb-q5" class="feedback"></div></div>
+<div class="question"><p><strong>6.</strong> (9m) / 3</p><div class="answers"><label><input type="radio" name="q6" value="3m"> 3m</label><label><input type="radio" name="q6" value="6m"> 6m</label><label><input type="radio" name="q6" value="27m"> 27m</label></div><div id="fb-q6" class="feedback"></div></div>
+<div class="question"><p><strong>7.</strong> (20a) / (4a)</p><div class="answers"><label><input type="radio" name="q7" value="5"> 5</label><label><input type="radio" name="q7" value="20"> 20</label><label><input type="radio" name="q7" value="a"> a</label></div><div id="fb-q7" class="feedback"></div></div>
+<div class="question"><p><strong>8.</strong> (15x) / (5y)</p><div class="answers"><label><input type="radio" name="q8" value="3x/y"> 3x/y</label><label><input type="radio" name="q8" value="x/3y"> x/3y</label><label><input type="radio" name="q8" value="15xy"> 15xy</label></div><div id="fb-q8" class="feedback"></div></div>
+<div class="question"><p><strong>9.</strong> (-12) / 6</p><div class="answers"><label><input type="radio" name="q9" value="-2"> -2</label><label><input type="radio" name="q9" value="2"> 2</label><label><input type="radio" name="q9" value="-72"> -72</label></div><div id="fb-q9" class="feedback"></div></div>
+<div class="question"><p><strong>10.</strong> (14xy) / (7x)</p><div class="answers"><label><input type="radio" name="q10" value="2y"> 2y</label><label><input type="radio" name="q10" value="14y"> 14y</label><label><input type="radio" name="q10" value="7y"> 7y</label></div><div id="fb-q10" class="feedback"></div></div>
+<div class="question"><p><strong>11.</strong> (5a²) / a</p><div class="answers"><label><input type="radio" name="q11" value="5a"> 5a</label><label><input type="radio" name="q11" value="a²/5"> a²/5</label><label><input type="radio" name="q11" value="5a²"> 5a²</label></div><div id="fb-q11" class="feedback"></div></div>
+<div class="question"><p><strong>12.</strong> (18b) / (-3)</p><div class="answers"><label><input type="radio" name="q12" value="-6b"> -6b</label><label><input type="radio" name="q12" value="6b"> 6b</label><label><input type="radio" name="q12" value="-15b"> -15b</label></div><div id="fb-q12" class="feedback"></div></div>
+<div class="question"><p><strong>13.</strong> (x³) / (x²)</p><div class="answers"><label><input type="radio" name="q13" value="x"> x</label><label><input type="radio" name="q13" value="x²"> x²</label><label><input type="radio" name="q13" value="x³"> x³</label></div><div id="fb-q13" class="feedback"></div></div>
+<div class="question"><p><strong>14.</strong> (25) / (0,5)</p><div class="answers"><label><input type="radio" name="q14" value="50"> 50</label><label><input type="radio" name="q14" value="12,5"> 12,5</label><label><input type="radio" name="q14" value="5"> 5</label></div><div id="fb-q14" class="feedback"></div></div>
+<div class="question"><p><strong>15.</strong> (-16a) / (8)</p><div class="answers"><label><input type="radio" name="q15" value="-2a"> -2a</label><label><input type="radio" name="q15" value="2a"> 2a</label><label><input type="radio" name="q15" value="-8a"> -8a</label></div><div id="fb-q15" class="feedback"></div></div>
 
 <button type="button" onclick="checkQuiz()">✔️ Auswerten</button>
 <button type="button" onclick="resetQuiz()">🔄 Reset</button>
 <div id="result" class="result"></div>
 </form>
 <script>
-var explanations = {"q1": {"answer": "2x", "exp": "6x ÷ 3 = 2x"}, "q2": {"answer": "x", "exp": "x² ÷ x = x"}};
+var explanations = {"q1": {"answer": "2x", "exp": "6x ÷ 3 = 2x"}, "q2": {"answer": "2a", "exp": "10a ÷ 5 = 2a"}, "q3": {"answer": "3", "exp": "12 ÷ 4 = 3"}, "q4": {"answer": "x", "exp": "x² ÷ x = x"}, "q5": {"answer": "4y", "exp": "(-8y) ÷ (-2) = 4y"}, "q6": {"answer": "3m", "exp": "9m ÷ 3 = 3m"}, "q7": {"answer": "5", "exp": "20a ÷ 4a = 5"}, "q8": {"answer": "3x/y", "exp": "15x ÷ 5y = 3x/y"}, "q9": {"answer": "-2", "exp": "-12 ÷ 6 = -2"}, "q10": {"answer": "2y", "exp": "14xy ÷ 7x = 2y"}, "q11": {"answer": "5a", "exp": "5a² ÷ a = 5a"}, "q12": {"answer": "-6b", "exp": "18b ÷ -3 = -6b"}, "q13": {"answer": "x", "exp": "x³ ÷ x² = x"}, "q14": {"answer": "50", "exp": "25 ÷ 0,5 = 50"}, "q15": {"answer": "-2a", "exp": "-16a ÷ 8 = -2a"}};
 function normalize(str) { return String(str).replace(/\s+/g,'').replace(',', '.').toLowerCase(); }
 function checkQuiz(){
   var score=0; var total=0;

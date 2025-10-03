@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Endtest – Mischquiz</title>
+<style>
+body { font-family: Arial, sans-serif; margin:20px; background:#f8f8f8; }
+h1 { color:#333; }
+.question { margin:16px 0; padding:12px; background:#fff; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,.1); }
+.answers label { display:block; }
+.correct { color:green; }
+.wrong { color:red; }
+.explanation { font-size:0.9em; color:#555; }
+.feedback { margin-top:6px; }
+button { margin-top:12px; padding:10px 16px; border:none; border-radius:6px; background:#28a745; color:white; cursor:pointer; }
+button:hover { background:#1e7e34; }
+</style>
+</head>
+<body>
+<h1>📘 Endtest – Klassenarbeit (Mischquiz)</h1>
+<form id="quizForm">
+<div class="question"><p><strong>1.</strong> Ein Rechteck hat die Seitenlängen 5 cm und 7 cm. Welcher Term beschreibt den Umfang?</p><div class="answers"><label><input type="radio" name="q1" value="5+7"> 5+7</label><label><input type="radio" name="q1" value="2·(5+7)"> 2·(5+7)</label><label><input type="radio" name="q1" value="5·7"> 5·7</label></div><div id="fb-q1" class="feedback"></div></div>
+<div class="question"><p><strong>2.</strong> Ein Quadrat hat die Seitenlänge 6 cm. Welcher Term für den Flächeninhalt?</p><div class="answers"><label><input type="radio" name="q2" value="6²"> 6²</label><label><input type="radio" name="q2" value="4·6"> 4·6</label><label><input type="radio" name="q2" value="2·6"> 2·6</label></div><div id="fb-q2" class="feedback"></div></div>
+<div class="question"><p><strong>3.</strong> Übersetze: „Die doppelte Zahl x vermindert um 3“.</p><div class="answers"><label><input type="radio" name="q3" value="2x+3"> 2x+3</label><label><input type="radio" name="q3" value="2x-3"> 2x-3</label><label><input type="radio" name="q3" value="x/2-3"> x/2-3</label></div><div id="fb-q3" class="feedback"></div></div>
+<div class="question"><p><strong>4.</strong> Berechne den Wert von 2x-3 für x=-4.</p><div class="answers"><label><input type="radio" name="q4" value="-11"> -11</label><label><input type="radio" name="q4" value="-5"> -5</label><label><input type="radio" name="q4" value="5"> 5</label></div><div id="fb-q4" class="feedback"></div></div>
+<div class="question"><p><strong>5.</strong> Berechne den Wert von -3y+7 für y=2.</p><div class="answers"><label><input type="radio" name="q5" value="1"> 1</label><label><input type="radio" name="q5" value="-13"> -13</label><label><input type="radio" name="q5" value="-5"> -5</label></div><div id="fb-q5" class="feedback"></div></div>
+<div class="question"><p><strong>6.</strong> Berechne: 3·x für x=5.</p><div class="answers"><label><input type="radio" name="q6" value="15"> 15</label><label><input type="radio" name="q6" value="8"> 8</label><label><input type="radio" name="q6" value="2x"> 2x</label></div><div id="fb-q6" class="feedback"></div></div>
+<div class="question"><p><strong>7.</strong> Berechne: x·x für x=-2.</p><div class="answers"><label><input type="radio" name="q7" value="4"> 4</label><label><input type="radio" name="q7" value="-2"> -2</label><label><input type="radio" name="q7" value="-4"> -4</label></div><div id="fb-q7" class="feedback"></div></div>
+<div class="question"><p><strong>8.</strong> Dividiere: (12x)/4.</p><div class="answers"><label><input type="radio" name="q8" value="3x"> 3x</label><label><input type="radio" name="q8" value="x/4"> x/4</label><label><input type="radio" name="q8" value="48x"> 48x</label></div><div id="fb-q8" class="feedback"></div></div>
+<div class="question"><p><strong>9.</strong> Dividiere: (20a)/(4a).</p><div class="answers"><label><input type="radio" name="q9" value="5"> 5</label><label><input type="radio" name="q9" value="a"> a</label><label><input type="radio" name="q9" value="20"> 20</label></div><div id="fb-q9" class="feedback"></div></div>
+<div class="question"><p><strong>10.</strong> Addiere: 7x+3x.</p><div class="answers"><label><input type="radio" name="q10" value="10x"> 10x</label><label><input type="radio" name="q10" value="x²"> x²</label><label><input type="radio" name="q10" value="4x"> 4x</label></div><div id="fb-q10" class="feedback"></div></div>
+<div class="question"><p><strong>11.</strong> Addiere: 2m+5n.</p><div class="answers"><label><input type="radio" name="q11" value="2m+5n"> 2m+5n</label><label><input type="radio" name="q11" value="7mn"> 7mn</label><label><input type="radio" name="q11" value="7m"> 7m</label></div><div id="fb-q11" class="feedback"></div></div>
+<div class="question"><p><strong>12.</strong> Subtrahiere: 9y-4y.</p><div class="answers"><label><input type="radio" name="q12" value="5y"> 5y</label><label><input type="radio" name="q12" value="13y"> 13y</label><label><input type="radio" name="q12" value="y²"> y²</label></div><div id="fb-q12" class="feedback"></div></div>
+<div class="question"><p><strong>13.</strong> Subtrahiere: -2x-3x.</p><div class="answers"><label><input type="radio" name="q13" value="-5x"> -5x</label><label><input type="radio" name="q13" value="x"> x</label><label><input type="radio" name="q13" value="-6x"> -6x</label></div><div id="fb-q13" class="feedback"></div></div>
+<div class="question"><p><strong>14.</strong> Fasse zusammen: 3x+5x-2.</p><div class="answers"><label><input type="radio" name="q14" value="8x-2"> 8x-2</label><label><input type="radio" name="q14" value="10x-2"> 10x-2</label><label><input type="radio" name="q14" value="3x+5x"> 3x+5x</label></div><div id="fb-q14" class="feedback"></div></div>
+<div class="question"><p><strong>15.</strong> Fasse zusammen: 4a-2a+6.</p><div class="answers"><label><input type="radio" name="q15" value="2a+6"> 2a+6</label><label><input type="radio" name="q15" value="6a+6"> 6a+6</label><label><input type="radio" name="q15" value="2a-6"> 2a-6</label></div><div id="fb-q15" class="feedback"></div></div>
+<div class="question"><p><strong>16.</strong> Löse auf: 2(x+3).</p><div class="answers"><label><input type="radio" name="q16" value="2x+6"> 2x+6</label><label><input type="radio" name="q16" value="2x+3"> 2x+3</label><label><input type="radio" name="q16" value="x+5"> x+5</label></div><div id="fb-q16" class="feedback"></div></div>
+<div class="question"><p><strong>17.</strong> Löse auf: -3(y-2).</p><div class="answers"><label><input type="radio" name="q17" value="-3y+6"> -3y+6</label><label><input type="radio" name="q17" value="-3y-2"> -3y-2</label><label><input type="radio" name="q17" value="-3y-6"> -3y-6</label></div><div id="fb-q17" class="feedback"></div></div>
+<div class="question"><p><strong>18.</strong> Fasse zusammen: (2x+3)+(4x+1).</p><div class="answers"><label><input type="radio" name="q18" value="6x+4"> 6x+4</label><label><input type="radio" name="q18" value="2x+4x+1"> 2x+4x+1</label><label><input type="radio" name="q18" value="6x+3"> 6x+3</label></div><div id="fb-q18" class="feedback"></div></div>
+<div class="question"><p><strong>19.</strong> Fasse zusammen: (5a-2)+(3a+6).</p><div class="answers"><label><input type="radio" name="q19" value="8a+4"> 8a+4</label><label><input type="radio" name="q19" value="8a-8"> 8a-8</label><label><input type="radio" name="q19" value="5a+3a-2"> 5a+3a-2</label></div><div id="fb-q19" class="feedback"></div></div>
+<div class="question"><p><strong>20.</strong> Multipliziere aus: (x+2)(x+3).</p><div class="answers"><label><input type="radio" name="q20" value="x²+5x+6"> x²+5x+6</label><label><input type="radio" name="q20" value="x²+6"> x²+6</label><label><input type="radio" name="q20" value="2x+3"> 2x+3</label></div><div id="fb-q20" class="feedback"></div></div>
+<div class="question"><p><strong>21.</strong> Multipliziere aus: (a+4)(b+5).</p><div class="answers"><label><input type="radio" name="q21" value="ab+5a+4b+20"> ab+5a+4b+20</label><label><input type="radio" name="q21" value="ab+9"> ab+9</label><label><input type="radio" name="q21" value="a+b+20"> a+b+20</label></div><div id="fb-q21" class="feedback"></div></div>
+<div class="question"><p><strong>22.</strong> Berechne: (x+1)(y-2).</p><div class="answers"><label><input type="radio" name="q22" value="xy-2x+y-2"> xy-2x+y-2</label><label><input type="radio" name="q22" value="x+y-1"> x+y-1</label><label><input type="radio" name="q22" value="xy+2"> xy+2</label></div><div id="fb-q22" class="feedback"></div></div>
+<div class="question"><p><strong>23.</strong> Finde den Umfang: Quadrat mit Seitenlänge a.</p><div class="answers"><label><input type="radio" name="q23" value="4a"> 4a</label><label><input type="radio" name="q23" value="a²"> a²</label><label><input type="radio" name="q23" value="2a"> 2a</label></div><div id="fb-q23" class="feedback"></div></div>
+<div class="question"><p><strong>24.</strong> Finde die Fläche: Rechteck mit Seiten x und y.</p><div class="answers"><label><input type="radio" name="q24" value="xy"> xy</label><label><input type="radio" name="q24" value="x+y"> x+y</label><label><input type="radio" name="q24" value="2(x+y)"> 2(x+y)</label></div><div id="fb-q24" class="feedback"></div></div>
+<div class="question"><p><strong>25.</strong> Berechne den Wert: 5-(-3).</p><div class="answers"><label><input type="radio" name="q25" value="8"> 8</label><label><input type="radio" name="q25" value="-8"> -8</label><label><input type="radio" name="q25" value="2"> 2</label></div><div id="fb-q25" class="feedback"></div></div>
+<div class="question"><p><strong>26.</strong> Berechne den Wert: -2·(-4).</p><div class="answers"><label><input type="radio" name="q26" value="8"> 8</label><label><input type="radio" name="q26" value="-8"> -8</label><label><input type="radio" name="q26" value="2"> 2</label></div><div id="fb-q26" class="feedback"></div></div>
+<div class="question"><p><strong>27.</strong> Berechne den Wert: (12+3)·2.</p><div class="answers"><label><input type="radio" name="q27" value="30"> 30</label><label><input type="radio" name="q27" value="24"> 24</label><label><input type="radio" name="q27" value="18"> 18</label></div><div id="fb-q27" class="feedback"></div></div>
+<div class="question"><p><strong>28.</strong> Multipliziere aus: (2m+3)(n+1).</p><div class="answers"><label><input type="radio" name="q28" value="2mn+2m+3n+3"> 2mn+2m+3n+3</label><label><input type="radio" name="q28" value="2mn+4"> 2mn+4</label><label><input type="radio" name="q28" value="mn+3"> mn+3</label></div><div id="fb-q28" class="feedback"></div></div>
+<div class="question"><p><strong>29.</strong> Multipliziere aus: (p-2)(p+5).</p><div class="answers"><label><input type="radio" name="q29" value="p²+3p-10"> p²+3p-10</label><label><input type="radio" name="q29" value="p²-10"> p²-10</label><label><input type="radio" name="q29" value="p²+7"> p²+7</label></div><div id="fb-q29" class="feedback"></div></div>
+<div class="question"><p><strong>30.</strong> Fasse zusammen: 7x-3x+2.</p><div class="answers"><label><input type="radio" name="q30" value="4x+2"> 4x+2</label><label><input type="radio" name="q30" value="10x+2"> 10x+2</label><label><input type="radio" name="q30" value="x²+2"> x²+2</label></div><div id="fb-q30" class="feedback"></div></div>
+
+<button type="button" onclick="checkQuiz()">✔️ Auswerten</button>
+<button type="button" onclick="resetQuiz()">🔄 Reset</button>
+<div id="result" class="result"></div>
+</form>
+<script>
+var explanations = {"q1": {"answer": "2·(5+7)", "exp": "Umfang Rechteck: 2·(a+b)"}, "q2": {"answer": "6²", "exp": "Fläche Quadrat: a²"}, "q3": {"answer": "2x-3", "exp": "Doppelte Zahl: 2x, vermindert um 3 → 2x-3"}, "q4": {"answer": "-11", "exp": "2·(-4)-3=-8-3=-11"}, "q5": {"answer": "1", "exp": "-3·2+7=-6+7=1"}, "q6": {"answer": "15", "exp": "3·5=15"}, "q7": {"answer": "4", "exp": "(-2)·(-2)=4"}, "q8": {"answer": "3x", "exp": "12x ÷ 4=3x"}, "q9": {"answer": "5", "exp": "20a ÷ 4a=5"}, "q10": {"answer": "10x", "exp": "7x+3x=10x"}, "q11": {"answer": "2m+5n", "exp": "Nicht gleichartig, bleibt 2m+5n"}, "q12": {"answer": "5y", "exp": "9y-4y=5y"}, "q13": {"answer": "-5x", "exp": "-2x-3x=-5x"}, "q14": {"answer": "8x-2", "exp": "3x+5x=8x, bleibt -2"}, "q15": {"answer": "2a+6", "exp": "4a-2a=2a, bleibt +6"}, "q16": {"answer": "2x+6", "exp": "Distributivgesetz: 2·x+2·3=2x+6"}, "q17": {"answer": "-3y+6", "exp": "-3·y-(-3·2)=-3y+6"}, "q18": {"answer": "6x+4", "exp": "2x+4x=6x, 3+1=4"}, "q19": {"answer": "8a+4", "exp": "5a+3a=8a, -2+6=4"}, "q20": {"answer": "x²+5x+6", "exp": "x·x+x·3+2·x+2·3"}, "q21": {"answer": "ab+5a+4b+20", "exp": "a·b+a·5+4·b+20"}, "q22": {"answer": "xy-2x+y-2", "exp": "x·y+x·(-2)+1·y+1·(-2)"}, "q23": {"answer": "4a", "exp": "Umfang Quadrat: 4a"}, "q24": {"answer": "xy", "exp": "Fläche Rechteck: x·y"}, "q25": {"answer": "8", "exp": "Minus und Minus ergibt Plus: 5+3=8"}, "q26": {"answer": "8", "exp": "Negativ mal Negativ = Positiv"}, "q27": {"answer": "30", "exp": "15·2=30"}, "q28": {"answer": "2mn+2m+3n+3", "exp": "2m·n+2m+1+3n+3"}, "q29": {"answer": "p²+3p-10", "exp": "p·p+p·5-2·p-10"}, "q30": {"answer": "4x+2", "exp": "7x-3x=4x, bleibt +2"}};
+function normalize(str) { return String(str).replace(/\s+/g,'').replace(',', '.').toLowerCase(); }
+function checkQuiz(){
+  var score=0; var total=0;
+  for (var key in explanations){
+    total++;
+    var chosen=document.querySelector('input[name="'+key+'"]:checked');
+    var box=document.getElementById('fb-'+key);
+    var correct=explanations[key].answer;
+    var exp=explanations[key].exp;
+    if (chosen && normalize(chosen.value)===normalize(correct)){
+      score++; box.innerHTML="<div class='correct'>✅ richtig</div>";
+    } else if (chosen){
+      box.innerHTML="<div class='wrong'>❌ falsch – richtig: "+correct+"</div><div class='explanation'>"+exp+"</div>";
+    } else {
+      box.innerHTML="<div class='wrong'>⚠️ keine Antwort – richtig: "+correct+"</div><div class='explanation'>"+exp+"</div>";
+    }
+  }
+  document.getElementById('result').innerHTML="Endergebnis: "+score+"/"+total+" Punkten";
+}
+function resetQuiz(){ document.getElementById('quizForm').reset(); 
+  for (var key in explanations){document.getElementById('fb-'+key).innerHTML="";}
+  document.getElementById('result').innerHTML=""; }
+</script>
+</body></html>

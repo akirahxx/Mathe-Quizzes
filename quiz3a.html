@@ -14,20 +14,34 @@ h1 { color:#333; }
 .explanation { font-size:0.9em; color:#555; }
 .feedback { margin-top:6px; }
 button { margin-top:12px; padding:10px 16px; border:none; border-radius:6px; background:#007BFF; color:white; cursor:pointer; }
+button:hover { background:#0056b3; }
 </style>
 </head>
 <body>
-<h1>➖ Werte mit negativen Zahlen</h1>
+<h1>➖ Werte eines Terms mit negativen Zahlen</h1>
 <form id="quizForm">
-<div class="question"><p><strong>1.</strong> Setze x=-2 in x²</p><div class="answers"><label><input type="radio" name="q1" value="-2"> -2</label><label><input type="radio" name="q1" value="4"> 4</label><label><input type="radio" name="q1" value="-4"> -4</label></div><div id="fb-q1" class="feedback"></div></div>
-<div class="question"><p><strong>2.</strong> Setze y=-3 in y+5</p><div class="answers"><label><input type="radio" name="q2" value="2"> 2</label><label><input type="radio" name="q2" value="-2"> -2</label><label><input type="radio" name="q2" value="-8"> -8</label></div><div id="fb-q2" class="feedback"></div></div>
+<div class="question"><p><strong>1.</strong> Berechne für x=-3: 2x+5</p><div class="answers"><label><input type="radio" name="q1" value="-1"> -1</label><label><input type="radio" name="q1" value="11"> 11</label><label><input type="radio" name="q1" value="-11"> -11</label></div><div id="fb-q1" class="feedback"></div></div>
+<div class="question"><p><strong>2.</strong> Berechne für y=-4: y²</p><div class="answers"><label><input type="radio" name="q2" value="-4"> -4</label><label><input type="radio" name="q2" value="16"> 16</label><label><input type="radio" name="q2" value="-16"> -16</label></div><div id="fb-q2" class="feedback"></div></div>
+<div class="question"><p><strong>3.</strong> Berechne für a=-2, b=3: a·b</p><div class="answers"><label><input type="radio" name="q3" value="-6"> -6</label><label><input type="radio" name="q3" value="6"> 6</label><label><input type="radio" name="q3" value="-5"> -5</label></div><div id="fb-q3" class="feedback"></div></div>
+<div class="question"><p><strong>4.</strong> Berechne für z=-10: z/2</p><div class="answers"><label><input type="radio" name="q4" value="-5"> -5</label><label><input type="radio" name="q4" value="5"> 5</label><label><input type="radio" name="q4" value="-20"> -20</label></div><div id="fb-q4" class="feedback"></div></div>
+<div class="question"><p><strong>5.</strong> Berechne für p=-6: p-8</p><div class="answers"><label><input type="radio" name="q5" value="-14"> -14</label><label><input type="radio" name="q5" value="2"> 2</label><label><input type="radio" name="q5" value="14"> 14</label></div><div id="fb-q5" class="feedback"></div></div>
+<div class="question"><p><strong>6.</strong> Berechne für m=-2: m²+3</p><div class="answers"><label><input type="radio" name="q6" value="1"> 1</label><label><input type="radio" name="q6" value="7"> 7</label><label><input type="radio" name="q6" value="-1"> -1</label></div><div id="fb-q6" class="feedback"></div></div>
+<div class="question"><p><strong>7.</strong> Berechne für t=-5: 3t+4</p><div class="answers"><label><input type="radio" name="q7" value="-11"> -11</label><label><input type="radio" name="q7" value="-15"> -15</label><label><input type="radio" name="q7" value="-5"> -5</label></div><div id="fb-q7" class="feedback"></div></div>
+<div class="question"><p><strong>8.</strong> Berechne für q=-8: q/4-1</p><div class="answers"><label><input type="radio" name="q8" value="-3"> -3</label><label><input type="radio" name="q8" value="-2"> -2</label><label><input type="radio" name="q8" value="-4"> -4</label></div><div id="fb-q8" class="feedback"></div></div>
+<div class="question"><p><strong>9.</strong> Berechne für r=-7: r+12</p><div class="answers"><label><input type="radio" name="q9" value="5"> 5</label><label><input type="radio" name="q9" value="-5"> -5</label><label><input type="radio" name="q9" value="-12"> -12</label></div><div id="fb-q9" class="feedback"></div></div>
+<div class="question"><p><strong>10.</strong> Berechne für u=-9: 2u-3</p><div class="answers"><label><input type="radio" name="q10" value="-21"> -21</label><label><input type="radio" name="q10" value="-15"> -15</label><label><input type="radio" name="q10" value="-11"> -11</label></div><div id="fb-q10" class="feedback"></div></div>
+<div class="question"><p><strong>11.</strong> Berechne für w=-3: w·w-2</p><div class="answers"><label><input type="radio" name="q11" value="7"> 7</label><label><input type="radio" name="q11" value="-5"> -5</label><label><input type="radio" name="q11" value="-11"> -11</label></div><div id="fb-q11" class="feedback"></div></div>
+<div class="question"><p><strong>12.</strong> Berechne für k=-2: 10/k</p><div class="answers"><label><input type="radio" name="q12" value="-5"> -5</label><label><input type="radio" name="q12" value="5"> 5</label><label><input type="radio" name="q12" value="-20"> -20</label></div><div id="fb-q12" class="feedback"></div></div>
+<div class="question"><p><strong>13.</strong> Berechne für a=-1, b=-4: a+b</p><div class="answers"><label><input type="radio" name="q13" value="-3"> -3</label><label><input type="radio" name="q13" value="-5"> -5</label><label><input type="radio" name="q13" value="5"> 5</label></div><div id="fb-q13" class="feedback"></div></div>
+<div class="question"><p><strong>14.</strong> Berechne für c=-2, d=0,5: c·d</p><div class="answers"><label><input type="radio" name="q14" value="-1"> -1</label><label><input type="radio" name="q14" value="1"> 1</label><label><input type="radio" name="q14" value="0"> 0</label></div><div id="fb-q14" class="feedback"></div></div>
+<div class="question"><p><strong>15.</strong> Berechne für x=-2, y=-3: x·y</p><div class="answers"><label><input type="radio" name="q15" value="6"> 6</label><label><input type="radio" name="q15" value="-6"> -6</label><label><input type="radio" name="q15" value="5"> 5</label></div><div id="fb-q15" class="feedback"></div></div>
 
 <button type="button" onclick="checkQuiz()">✔️ Auswerten</button>
 <button type="button" onclick="resetQuiz()">🔄 Reset</button>
 <div id="result" class="result"></div>
 </form>
 <script>
-var explanations = {"q1": {"answer": "4", "exp": "(-2)²=4"}, "q2": {"answer": "2", "exp": "-3+5=2"}};
+var explanations = {"q1": {"answer": "-1", "exp": "2·(-3)+5=-6+5=-1"}, "q2": {"answer": "16", "exp": "(-4)²=16"}, "q3": {"answer": "-6", "exp": "-2·3=-6"}, "q4": {"answer": "-5", "exp": "-10/2=-5"}, "q5": {"answer": "-14", "exp": "-6-8=-14"}, "q6": {"answer": "7", "exp": "(-2)²+3=4+3=7"}, "q7": {"answer": "-11", "exp": "3·(-5)+4=-15+4=-11"}, "q8": {"answer": "-3", "exp": "-8/4-1=-2-1=-3"}, "q9": {"answer": "5", "exp": "-7+12=5"}, "q10": {"answer": "-21", "exp": "2·(-9)-3=-18-3=-21"}, "q11": {"answer": "7", "exp": "(-3)²-2=9-2=7"}, "q12": {"answer": "-5", "exp": "10/(-2)=-5"}, "q13": {"answer": "-5", "exp": "-1+(-4)=-5"}, "q14": {"answer": "-1", "exp": "-2·0,5=-1"}, "q15": {"answer": "6", "exp": "-2·(-3)=6"}};
 function normalize(str) { return String(str).replace(/\s+/g,'').replace(',', '.').toLowerCase(); }
 function checkQuiz(){
   var score=0; var total=0;
