@@ -2,20 +2,45 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>Mathe Quizzes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8. Klasse – 1. Arbeit</title>
 <style>
-body{font-family:Arial;margin:30px; text-align:center;}
-button{padding:15px 25px;margin:20px;font-size:1.2em;border:none;border-radius:8px;cursor:pointer;}
-.active{background:#007BFF;color:#fff;}
-.active:hover{background:#0056b3;}
-.disabled{background:#ccc;color:#666;cursor:not-allowed;}
+body { font-family: Arial, sans-serif; text-align:center; background:#f8f8f8; margin:20px; }
+h1 { color:#222; }
+h2 { color:#555; }
+.button-container { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:20px; }
+a.button {
+  display:inline-block;
+  padding:12px 18px;
+  background:#28a745;
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+  font-size:16px;
+  min-width:260px;
+  text-align:left;
+}
+a.button:hover { background:#1e7e34; }
+.icon { margin-right:8px; }
 </style>
 </head>
 <body>
-<h1>Mathe Quizzes</h1>
-<a href="arbeit1.html"><button class="active">📘 8. Klasse – 1. Arbeit</button></a><br>
-<button class="disabled">🔒 8. Klasse – 2. Arbeit</button><br>
-<button class="disabled">🔒 8. Klasse – 3. Arbeit</button><br>
-<button class="disabled">🔒 8. Klasse – 4. Arbeit</button>
+<h1>8. Klasse – 1. Arbeit</h1>
+<h2>Wähle ein Thema:</h2>
+<div class="button-container">
+  <a href="quiz1.html" class="button"><span class="icon">📐</span> Quiz 1: Umfang & Flächeninhalt</a>
+  <a href="quiz2.html" class="button"><span class="icon">✏️</span> Quiz 2: Texte in Terme</a>
+  <a href="quiz3.html" class="button"><span class="icon">🔢</span> Quiz 3: Werte eines Terms berechnen</a>
+  <a href="quiz3a.html" class="button"><span class="icon">➖</span> Quiz 3a: Werte mit negativen Zahlen</a>
+  <a href="quiz4.html" class="button"><span class="icon">✖️</span> Quiz 4: Terme multiplizieren</a>
+  <a href="quiz5.html" class="button"><span class="icon">➗</span> Quiz 5: Terme dividieren</a>
+  <a href="quiz6.html" class="button"><span class="icon">➕</span> Quiz 6: Terme addieren</a>
+  <a href="quiz7.html" class="button"><span class="icon">➖</span> Quiz 7: Terme subtrahieren</a>
+  <a href="quiz8.html" class="button"><span class="icon">📑</span> Quiz 8: Terme zusammenfassen</a>
+  <a href="quiz9.html" class="button"><span class="icon">🧩</span> Quiz 9: Klammern auflösen</a>
+  <a href="quiz10.html" class="button"><span class="icon">🧾</span> Quiz 10: Klammern zusammenfassen</a>
+  <a href="quiz11.html" class="button"><span class="icon">✖️</span> Quiz 11: Ausmultiplizieren von Summen</a>
+  <a href="endtest.html" class="button"><span class="icon">📘</span> Endtest – Mischquiz</a>
+</div>
 </body>
 </html>
