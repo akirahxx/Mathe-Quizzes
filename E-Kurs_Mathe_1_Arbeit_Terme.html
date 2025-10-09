@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E-Kurs Mathe 1. Arbeit – Terme</title>
+<style>
+:root{--green:#28a745;--red:#c0392b;--bg:#f8f8f8;}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);margin:20px;}
+h1{margin:0 0 6px 0} h2{margin:20px 0 8px 0}
+section{background:#fff;padding:16px;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.08);margin-bottom:14px;}
+.question{margin:10px 0;padding:10px;border:1px solid #eee;border-radius:8px;}
+label{display:block;margin:6px 0;}
+input[type=text]{padding:8px;border:1px solid #ccc;border-radius:6px;width:320px;max-width:95%;}
+.small{font-size:0.92em;color:#555}
+.btn{display:inline-block;margin:10px 6px 0 0;padding:10px 16px;border:0;border-radius:8px;color:#fff;background:#007bff;cursor:pointer}
+.btn:hover{background:#0056b3}
+.correct{color:var(--green);font-weight:bold}
+.wrong{color:var(--red);font-weight:bold}
+.result{margin-top:10px;font-weight:bold}
+.note{background:#fff3cd;border:1px solid #ffeeba;padding:8px;border-radius:6px;margin-bottom:10px}
+</style>
+</head><body>
+<h1>E-Kurs Mathe – 1. Arbeit: Terme</h1>
+<p class="small">Anspruchsvolles Testformat: keine Lösungsschritte, nur richtig/falsch. Exakte Aufgaben aus der Klassenarbeit.</p>
+<form id="qform">
+<section><h2>Teil I – Ohne Taschenrechner – Aufgabe 1: Werte von Termen</h2>
+<div class='question'><div><strong>1.</strong> Für a=4, b=3: a + b = ?</div><div style='margin-top:6px;'><input type='text' name='q1' placeholder='Antwort eingeben'></div><div id='fb-q1'></div></div>
+<div class='question'><div><strong>2.</strong> Für a=4, b=3: a − 2b = ?</div><div style='margin-top:6px;'><input type='text' name='q2' placeholder='Antwort eingeben'></div><div id='fb-q2'></div></div>
+<div class='question'><div><strong>3.</strong> Für a=4, b=3: 5ab = ?</div><div style='margin-top:6px;'><input type='text' name='q3' placeholder='Antwort eingeben'></div><div id='fb-q3'></div></div>
+<div class='question'><div><strong>4.</strong> Für a=4, b=3: a² = ?</div><div style='margin-top:6px;'><input type='text' name='q4' placeholder='Antwort eingeben'></div><div id='fb-q4'></div></div>
+<div class='question'><div><strong>5.</strong> Für a=-2, b=5: a + b = ?</div><div style='margin-top:6px;'><input type='text' name='q5' placeholder='Antwort eingeben'></div><div id='fb-q5'></div></div>
+<div class='question'><div><strong>6.</strong> Für a=-2, b=5: a − 2b = ?</div><div style='margin-top:6px;'><input type='text' name='q6' placeholder='Antwort eingeben'></div><div id='fb-q6'></div></div>
+<div class='question'><div><strong>7.</strong> Für a=-2, b=5: 5ab = ?</div><div style='margin-top:6px;'><input type='text' name='q7' placeholder='Antwort eingeben'></div><div id='fb-q7'></div></div>
+<div class='question'><div><strong>8.</strong> Für a=-2, b=5: a² = ?</div><div style='margin-top:6px;'><input type='text' name='q8' placeholder='Antwort eingeben'></div><div id='fb-q8'></div></div>
+</section>
+<section><h2>Teil I – Aufgabe 2: Stelle den zugehörigen Term auf</h2>
+<div class='question'><div><strong>9.</strong> Das Dreifache einer Zahl vermehrt um 7</div><div style='margin-top:6px;'><input type='text' name='q9' placeholder='Antwort eingeben'></div><div id='fb-q9'></div></div>
+<div class='question'><div><strong>10.</strong> Die Summe aus dem Fünffachen und dem Doppelten einer Zahl</div><div style='margin-top:6px;'><input type='text' name='q10' placeholder='Antwort eingeben'></div><div id='fb-q10'></div></div>
+<div class='question'><div><strong>11.</strong> Die Differenz aus 63 und dem Quadrat einer Zahl</div><div style='margin-top:6px;'><input type='text' name='q11' placeholder='Antwort eingeben'></div><div id='fb-q11'></div></div>
+<div class='question'><div><strong>12.</strong> Das Produkt aus 34 und einer Zahl vermindert um 18</div><div style='margin-top:6px;'><input type='text' name='q12' placeholder='Antwort eingeben'></div><div id='fb-q12'></div></div>
+</section>
+<section><h2>Teil I – Aufgabe 3: Notiere den Term in Worten</h2>
+<div class='question'><div><strong>13.</strong> 18 − x</div><div style='margin-top:6px;'><input type='text' name='q13' placeholder='Antwort eingeben'></div><div id='fb-q13'></div></div>
+<div class='question'><div><strong>14.</strong> x : 3</div><div style='margin-top:6px;'><input type='text' name='q14' placeholder='Antwort eingeben'></div><div id='fb-q14'></div></div>
+<div class='question'><div><strong>15.</strong> 4x + 7</div><div style='margin-top:6px;'><input type='text' name='q15' placeholder='Antwort eingeben'></div><div id='fb-q15'></div></div>
+<div class='question'><div><strong>16.</strong> (6 + 9) · x</div><div style='margin-top:6px;'><input type='text' name='q16' placeholder='Antwort eingeben'></div><div id='fb-q16'></div></div>
+</section>
+<section><h2>Teil I – Aufgabe 4: Fehler finden und korrigieren</h2>
+<div class='question'><div><strong>17.</strong> n · (3 − m) = ?</div><div style='margin-top:6px;'><input type='text' name='q17' placeholder='Antwort eingeben'></div><div id='fb-q17'></div></div>
+<div class='question'><div><strong>18.</strong> (a + 4)(b + 7) = ?</div><div style='margin-top:6px;'><input type='text' name='q18' placeholder='Antwort eingeben'></div><div id='fb-q18'></div></div>
+</section>
+<section><h2>Teil II – Mit Taschenrechner – Aufgabe 5 (Figuren)</h2>
+<div class='note'>Nur die gedruckten Zahlen/Buchstaben werden verwendet (ohne handschriftliche Zusätze).</div>
+<div class='question'><div><strong>19.</strong> 5a) Umfang des L-Polygons (vereinfacht) =</div><div style='margin-top:6px;'><input type='text' name='q19' placeholder='Antwort eingeben'></div><div id='fb-q19'></div></div>
+<div class='question'><div><strong>20.</strong> 5b) Flächeninhalt des L-Polygons (vereinfacht) =</div><div style='margin-top:6px;'><input type='text' name='q20' placeholder='Antwort eingeben'></div><div id='fb-q20'></div></div>
+<div class='question'><div><strong>21.</strong> 5c) Flächeninhalt der grauen Fläche (Rechteck) =</div><div style='margin-top:6px;'><input type='text' name='q21' placeholder='Antwort eingeben'></div><div id='fb-q21'></div></div>
+</section>
+<section><h2>Teil II – Aufgabe 6: Vereinfache die Terme</h2>
+<div class='question'><div><strong>22.</strong> -6s + 2t + 3t + 13s =</div><div style='margin-top:6px;'><input type='text' name='q22' placeholder='Antwort eingeben'></div><div id='fb-q22'></div></div>
+<div class='question'><div><strong>23.</strong> 24x - 11 + 6x - 48 - 13y + 6 =</div><div style='margin-top:6px;'><input type='text' name='q23' placeholder='Antwort eingeben'></div><div id='fb-q23'></div></div>
+<div class='question'><div><strong>24.</strong> 3y + 3 - 22z + 7y - 4z + 2y + 18 =</div><div style='margin-top:6px;'><input type='text' name='q24' placeholder='Antwort eingeben'></div><div id='fb-q24'></div></div>
+<div class='question'><div><strong>25.</strong> (2 ÷ x) · 9 =</div><div style='margin-top:6px;'><input type='text' name='q25' placeholder='Antwort eingeben'></div><div id='fb-q25'></div></div>
+<div class='question'><div><strong>26.</strong> (-4) · a · 6 · b =</div><div style='margin-top:6px;'><input type='text' name='q26' placeholder='Antwort eingeben'></div><div id='fb-q26'></div></div>
+<div class='question'><div><strong>27.</strong> -30s · (-8) · u · t =</div><div style='margin-top:6px;'><input type='text' name='q27' placeholder='Antwort eingeben'></div><div id='fb-q27'></div></div>
+<div class='question'><div><strong>28.</strong> 4 · a · 5 · a =</div><div style='margin-top:6px;'><input type='text' name='q28' placeholder='Antwort eingeben'></div><div id='fb-q28'></div></div>
+<div class='question'><div><strong>29.</strong> 5(c + b) =</div><div style='margin-top:6px;'><input type='text' name='q29' placeholder='Antwort eingeben'></div><div id='fb-q29'></div></div>
+<div class='question'><div><strong>30.</strong> -4(13 + 5a) =</div><div style='margin-top:6px;'><input type='text' name='q30' placeholder='Antwort eingeben'></div><div id='fb-q30'></div></div>
+<div class='question'><div><strong>31.</strong> -(3x - 9) =</div><div style='margin-top:6px;'><input type='text' name='q31' placeholder='Antwort eingeben'></div><div id='fb-q31'></div></div>
+<div class='question'><div><strong>32.</strong> 6(2u + 8x - 3) =</div><div style='margin-top:6px;'><input type='text' name='q32' placeholder='Antwort eingeben'></div><div id='fb-q32'></div></div>
+</section>
+<section><h2>Teil II – Aufgabe 7: Multipliziere die Summen aus</h2>
+<div class='question'><div><strong>33.</strong> (p + q)(x + z) =</div><div style='margin-top:6px;'><input type='text' name='q33' placeholder='Antwort eingeben'></div><div id='fb-q33'></div></div>
+<div class='question'><div><strong>34.</strong> (r + s)(t - v) =</div><div style='margin-top:6px;'><input type='text' name='q34' placeholder='Antwort eingeben'></div><div id='fb-q34'></div></div>
+<div class='question'><div><strong>35.</strong> (a - z)(z - b) =</div><div style='margin-top:6px;'><input type='text' name='q35' placeholder='Antwort eingeben'></div><div id='fb-q35'></div></div>
+<div class='question'><div><strong>36.</strong> (y - 6)(y - 8) =</div><div style='margin-top:6px;'><input type='text' name='q36' placeholder='Antwort eingeben'></div><div id='fb-q36'></div></div>
+<div class='question'><div><strong>37.</strong> (3a + 2)(2b - 5) =</div><div style='margin-top:6px;'><input type='text' name='q37' placeholder='Antwort eingeben'></div><div id='fb-q37'></div></div>
+<div class='question'><div><strong>38.</strong> (5c - 3d)(2d - 7c) =</div><div style='margin-top:6px;'><input type='text' name='q38' placeholder='Antwort eingeben'></div><div id='fb-q38'></div></div>
+</section>
+<section><h2>Teil II – Aufgabe 8: Sachaufgabe Schwimmbad (Salztal Paradies)</h2>
+<div class='question'><div><strong>39.</strong> b) Gesamtpreis inkl. Nachzahlung (2 Std. + 30 Min.) in €:</div><div style='margin-top:6px;'><input type='text' name='q39' placeholder='Antwort eingeben'></div><div id='fb-q39'></div></div>
+<div class='question'><div><strong>40.</strong> c) Allgemeiner Term für den Gesamtpreis in € (x = Anzahl der 10-Minuten-Überziehungen):</div><div style='margin-top:6px;'><input type='text' name='q40' placeholder='Antwort eingeben'></div><div id='fb-q40'></div></div>
+<div class='question'><div><strong>41.</strong> d) Nachzahlungsbetrag für 30 Minuten in €:</div><div style='margin-top:6px;'><input type='text' name='q41' placeholder='Antwort eingeben'></div><div id='fb-q41'></div></div>
+</section>
+<section><h2>Bonusaufgabe: Äquivalente Terme</h2>
+<div class='question'><div><strong>42.</strong> Welche sind äquivalent?</div><label><input type='radio' name='q42' value='I und IV'> I und IV</label><label><input type='radio' name='q42' value='II und III'> II und III</label><label><input type='radio' name='q42' value='I und II'> I und II</label><label><input type='radio' name='q42' value='alle vier'> alle vier</label><div id='fb-q42'></div></div>
+<div class='question'><div><strong>43.</strong> Und welches zweite Paar ist äquivalent?</div><label><input type='radio' name='q43' value='II und III'> II und III</label><label><input type='radio' name='q43' value='I und II'> I und II</label><label><input type='radio' name='q43' value='III und IV'> III und IV</label><label><input type='radio' name='q43' value='keines'> keines</label><div id='fb-q43'></div></div>
+</section>
+
+<div>
+  <button type="button" class="btn" onclick="checkAll()">✔️ Auswerten</button>
+  <button type="button" class="btn" onclick="resetAll()">🔄 Reset</button>
+</div>
+<div id="summary" class="result"></div>
+</form>
+<script>
+const answers = {"q1": ["7"], "q2": ["-2"], "q3": ["60"], "q4": ["16"], "q5": ["3"], "q6": ["-12"], "q7": ["-50"], "q8": ["4"], "q9": ["3x+7", "7+3x"], "q10": ["5x+2x", "2x+5x"], "q11": ["63-x^2", "63- x^2"], "q12": ["34x-18"], "q13": ["18 vermindert um eine zahl", "18 minus eine zahl"], "q14": ["eine zahl durch drei", "eine zahl geteilt durch drei"], "q15": ["das vierfache einer zahl vermehrt um 7", "vier mal eine zahl vermehrt um 7"], "q16": ["die summe aus 6 und 9 multipliziert mit einer zahl", "(6 und 9) summe mal eine zahl"], "q17": ["3n - mn", "3n - nm"], "q18": ["ab + 7a + 4b + 28"], "q19": ["2x + 30", "30 + 2x"], "q20": ["32 + 3x", "3x + 32"], "q21": ["9y - 54", "9*(y-6)", "9(y-6)"], "q22": ["7s + 5t", "5t + 7s"], "q23": ["30x - 13y - 53"], "q24": ["12y - 26z + 21"], "q25": ["18/x", "18 : x"], "q26": ["-24ab"], "q27": ["240sut", "240stu", "240ust", "240tsu"], "q28": ["20a^2", "20a²"], "q29": ["5c + 5b", "5b + 5c"], "q30": ["-52 - 20a"], "q31": ["-3x + 9"], "q32": ["12u + 48x - 18"], "q33": ["px + pz + qx + qz"], "q34": ["rt - rv + st - sv"], "q35": ["az - ab - z^2 + bz", "az - ab - z² + bz"], "q36": ["y^2 - 14y + 48", "y² - 14y + 48"], "q37": ["6ab - 15a + 4b - 10"], "q38": ["-35c^2 - 6d^2 + 31cd", "-35c² - 6d² + 31cd"], "q39": ["13.90", "13,90"], "q40": ["11.50 + 0.80x", "11,50 + 0,80x"], "q41": ["2.40", "2,40"], "q42": "I und IV", "q43": "II und III"};
+function norm(x){return String(x).trim().replace(',', '.').replace(/\s+/g,' ').toLowerCase();}
+function anyMatch(val, solutions){
+  if(!Array.isArray(solutions)) solutions = [solutions];
+  val = norm(val);
+  return solutions.some(s => norm(s)===val);
+}
+function checkAll(){
+  let score=0,total=0;
+  for (const [qid,ans] of Object.entries(answers)){ 
+    total++;
+    const el = document.querySelector(`[name="${qid}"]`);
+    let val = "";
+    if (el && el.type==='text') val = el.value;
+    else {
+      const chosen = document.querySelector(`[name="${qid}"]:checked`);
+      if (chosen) val = chosen.value;
+    }
+    const fb = document.getElementById('fb-'+qid);
+    if (val!=="" && anyMatch(val, ans)){ fb.innerHTML = "<span class='correct'>richtig</span>"; score++; }
+    else if (val===""){ fb.innerHTML = "<span class='wrong'>keine Antwort</span>"; }
+    else { fb.innerHTML = "<span class='wrong'>falsch</span>"; }
+  }
+  document.getElementById('summary').innerText = `Punkte: ${score} / ${total}`;
+}
+function resetAll(){
+  document.getElementById('qform').reset();
+  for (const qid of Object.keys(answers)){ 
+    const fb = document.getElementById('fb-'+qid); fb.innerHTML="";
+  }
+  document.getElementById('summary').innerText="";
+}
+</script>
+</body></html>
