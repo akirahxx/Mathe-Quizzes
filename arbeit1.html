@@ -1,51 +1,111 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>8. Klasse – 1. Arbeit</title>
-<style>
-body { font-family: Arial, sans-serif; background:#f8f8f8; margin:20px; }
-h1 { color:#222; text-align:left; }
-h2 { color:#555; text-align:left; }
-.button-container { display:flex; flex-direction:column; align-items:flex-start; gap:12px; margin-top:20px; }
-a.button {
-  display:inline-block;
-  padding:12px 18px;
-  background:#28a745;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-size:16px;
-  min-width:260px;
-}
-a.button:hover { background:#1e7e34; }
-.icon { margin-right:8px; }
-.section-title { margin-top:20px; font-weight:bold; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>8. Klasse – 1. Arbeit</title>
+  <style>
+    :root{
+      --bg:#f7f9fb;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --primary:#16a34a;
+      --primary-d:#15803d;
+      --link:#2563eb;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Arial,sans-serif;
+      color:var(--text);
+      background:var(--bg);
+    }
+    header{
+      max-width:960px;
+      margin:18px auto 6px;
+      padding:0 16px;
+    }
+    .breadcrumbs{
+      font-size:14px;
+      color:var(--muted);
+      margin-bottom:6px;
+    }
+    .breadcrumbs a{color:var(--link);text-decoration:none}
+    h1{
+      margin:6px 0 0;
+      font-size:clamp(22px,4vw,34px);
+      line-height:1.2;
+    }
+    h2{
+      margin:6px 0 0;
+      font-weight:600;
+      color:var(--muted);
+      font-size:clamp(16px,2.7vw,18px);
+    }
+    main{
+      max-width:960px;
+      margin:12px auto 32px;
+      padding:0 16px;
+    }
+    .list{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-top:14px;
+    }
+    .quiz{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
+      background:var(--primary);
+      color:#fff;
+      padding:12px 14px;
+      border-radius:10px;
+      box-shadow:0 2px 0 rgba(0,0,0,.08);
+      transition:transform .05s ease, background .2s ease;
+      min-height:44px;
+    }
+    .quiz:hover{background:var(--primary-d)}
+    .quiz:active{transform:translateY(1px)}
+    .icon{width:22px;display:inline-flex;justify-content:center}
+    .label{font-size:16px}
+    footer{
+      max-width:960px;
+      margin:24px auto 40px;
+      padding:0 16px;
+      color:var(--muted);
+      font-size:13px;
+      text-align:center;
+    }
+  </style>
 </head>
 <body>
-<h1>8. Klasse – 1. Arbeit</h1>
-<h2>Wähle ein Thema:</h2>
+  <header>
+    <div class="breadcrumbs"><a href="./index.html">Start</a> · 8. Klasse – 1. Arbeit</div>
+    <h1>Mathe Quizzes</h1>
+    <h2>Themen – 1. Arbeit</h2>
+  </header>
 
-<div class="button-container">
-  <div class="section-title">🧪 Klassenarbeit (E-Kurs)</div>
-  <a href="E-Kurs_Mathe_1_Arbeit_Terme.html" class="button"><span class="icon">🧪</span> E-Kurs: 1. Arbeit – Terme</a>
+  <main>
+    <div class="list">
+      <a class="quiz" href="./quiz1.html"><span class="icon">📐</span><span class="label">Quiz 1: Umfang & Flächeninhalt</span></a>
+      <a class="quiz" href="./quiz2.html"><span class="icon">✏️</span><span class="label">Quiz 2: Texte in Terme</span></a>
+      <a class="quiz" href="./quiz3.html"><span class="icon">🔢</span><span class="label">Quiz 3: Werte eines Terms berechnen</span></a>
+      <a class="quiz" href="./quiz3a.html"><span class="icon">➖</span><span class="label">Quiz 3a: Werte mit negativen Zahlen</span></a>
+      <a class="quiz" href="./quiz4.html"><span class="icon">✖️</span><span class="label">Quiz 4: Terme multiplizieren</span></a>
+      <a class="quiz" href="./quiz5.html"><span class="icon">➗</span><span class="label">Quiz 5: Terme dividieren</span></a>
+      <a class="quiz" href="./quiz6.html"><span class="icon">➕</span><span class="label">Quiz 6: Terme addieren</span></a>
+      <a class="quiz" href="./quiz7.html"><span class="icon">➖</span><span class="label">Quiz 7: Terme subtrahieren</span></a>
+      <a class="quiz" href="./quiz8.html"><span class="icon">📑</span><span class="label">Quiz 8: Terme zusammenfassen</span></a>
+      <a class="quiz" href="./quiz9.html"><span class="icon">🧩</span><span class="label">Quiz 9: Klammern auflösen</span></a>
+      <a class="quiz" href="./quiz10.html"><span class="icon">🧾</span><span class="label">Quiz 10: Klammern zusammenfassen</span></a>
+      <a class="quiz" href="./quiz11.html"><span class="icon">✖️</span><span class="label">Quiz 11: Ausmultiplizieren von Summen</span></a>
+      <a class="quiz" href="./endtest.html"><span class="icon">📘</span><span class="label">Endtest – Mischquiz</span></a>
+    </div>
+  </main>
 
-  <div class="section-title">📚 Themen-Quizzes</div>
-  <a href="quiz1.html" class="button"><span class="icon">📐</span> Quiz 1: Umfang & Flächeninhalt</a>
-  <a href="quiz2.html" class="button"><span class="icon">✏️</span> Quiz 2: Texte in Terme</a>
-  <a href="quiz3.html" class="button"><span class="icon">🔢</span> Quiz 3: Werte eines Terms berechnen</a>
-  <a href="quiz3a.html" class="button"><span class="icon">➖</span> Quiz 3a: Werte mit negativen Zahlen</a>
-  <a href="quiz4.html" class="button"><span class="icon">✖️</span> Quiz 4: Terme multiplizieren</a>
-  <a href="quiz5.html" class="button"><span class="icon">➗</span> Quiz 5: Terme dividieren</a>
-  <a href="quiz6.html" class="button"><span class="icon">➕</span> Quiz 6: Terme addieren</a>
-  <a href="quiz7.html" class="button"><span class="icon">➖</span> Quiz 7: Terme subtrahieren</a>
-  <a href="quiz8.html" class="button"><span class="icon">📑</span> Quiz 8: Terme zusammenfassen</a>
-  <a href="quiz9.html" class="button"><span class="icon">🧩</span> Quiz 9: Klammern auflösen</a>
-  <a href="quiz10.html" class="button"><span class="icon">🧾</span> Quiz 10: Klammern zusammenfassen</a>
-  <a href="quiz11.html" class="button"><span class="icon">✖️</span> Quiz 11: Ausmultiplizieren von Summen</a>
-  <a href="endtest.html" class="button"><span class="icon">📘</span> Endtest – Mischquiz</a>
-</div>
+  <footer>© 2025 Mathe Quizzes</footer>
 </body>
 </html>
